@@ -1,0 +1,14 @@
+var
+  n, i, fact: integer;
+
+begin
+  writeln('Введите число для вычисления факториала:');
+  readln(n);
+
+  fact := 1;
+  for i := 1 to n do
+    fact := fact * i;
+
+  writeln('Факториал числа ', n, ' равен ', fact);
+  readln;
+end.
