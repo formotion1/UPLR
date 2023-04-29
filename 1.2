@@ -1,0 +1,36 @@
+var
+  x0, y0, xn, yn, xk, yk: real;
+begin
+  writeln('Введите x0:');
+  readln(x0);
+  writeln('Введите y0:');
+  readln(y0);
+  writeln('Введите xn:');
+  readln(xn);
+  writeln('Введите yn:');
+  readln(yn);
+  writeln('Введите xk:');
+  readln(xk);
+  writeln('Введите yk:');
+  readln(yk);
+  
+  if (xn = x0) and (yn = y0) or (xk = x0) and (yk = y0) then
+    writeln('Начало или конец дуги совпадают с центром окружности')
+  else if (xn > x0) and (yn > y0) then
+    writeln('Начало дуги находится в первой четверти')
+  else if (xn < x0) and (yn > y0) then
+    writeln('Начало дуги находится во второй четверти')
+  else if (xn < x0) and (yn < y0) then
+    writeln('Начало дуги находится в третьей четверти')
+  else if (xn > x0) and (yn < y0) then
+    writeln('Начало дуги находится в четвертой четверти');
+  
+  if (xk > x0) and (yk > y0) then
+    writeln('Конец дуги находится в первой четверти')
+  else if (xk < x0) and (yk > y0) then
+    writeln('Конец дуги находится во второй четверти')
+  else if (xk < x0) and (yk < y0) then
+    writeln('Конец дуги находится в третьей четверти')
+  else if (xk > x0) and (yk < y0) then
+    writeln('Конец дуги находится в четвертой четверти');
+end.
