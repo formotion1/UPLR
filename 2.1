@@ -1,0 +1,15 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        double a, V, S;
+        Console.Write("Введите длину ребра куба: ");
+        a = Convert.ToDouble(Console.ReadLine());
+        V = Math.Pow(a, 3);
+        S = 4 * Math.Pow(a, 2);
+        Console.WriteLine("Объем куба = " + V);
+        Console.WriteLine("Площадь боковой поверхности = " + S);
+        Console.ReadKey();
+    }
+}
