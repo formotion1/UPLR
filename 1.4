@@ -1,0 +1,19 @@
+var num, digit, ch, nech: integer;
+begin
+  write('Введите число: ');
+  readln(num);
+  ch := 0;
+  nech := 0;
+  while num > 0 do
+  begin
+    digit := num mod 10;
+    if digit mod 2 = 0 then
+      ch:= ch + 1
+    else
+      nech := nech + 1;
+    num := num div 10;
+  end;
+  writeln('Количество четных цифр: ', ch);
+  writeln('Количество нечетных цифр: ', nech);
+  readln;
+end.
