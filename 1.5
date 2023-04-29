@@ -1,0 +1,16 @@
+var num, sum, count: integer;
+begin
+  sum := 0;
+  count := 0;
+  readln(num);
+  while num >= 0 do
+  begin
+    sum := sum + num;
+    count := count + 1;
+    readln(num);
+  end;
+  if count > 0 then
+    writeln('Среднее арифметическое: ', sum / count)
+  else
+    writeln('Последовательность не содержит неотрицательных чисел');
+end.
