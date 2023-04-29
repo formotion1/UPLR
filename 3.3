@@ -1,0 +1,28 @@
+using System;
+class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Введите дату в формате DD.MM.YYYY:");
+
+        string input = Console.ReadLine();
+        string[] parts = input.Split('.');
+
+        int a = int.Parse(parts[0]);
+        int b = int.Parse(parts[1]);
+        int c = int.Parse(parts[2]);
+        int daysInYear;
+        int daysInMonth = DateTime.DaysInMonth(c, b);
+        Console.WriteLine($"Количество дней в месяце: {daysInMonth}");
+        if ((c % 4 == 0 && c % 100 != 0) || c % 400 == 0)
+{
+    daysInYear = 366;
+}
+else
+{
+    daysInYear = 365;
+}
+        Console.WriteLine($"Количество дней в году: {daysInYear}");
+        Console.ReadKey();
+    }
+}
