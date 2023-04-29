@@ -1,0 +1,19 @@
+using System;
+class Program {
+    static void Main(string[] args) {
+        Console.Write("Введите длину массива: ");
+        int length = int.Parse(Console.ReadLine());
+        int[] arr = new int[length];
+        for (int i = 0; i < length; i++) {
+            Console.Write("Введите число: ");
+            arr[i] = int.Parse(Console.ReadLine());
+        }
+        int count = 0;
+        foreach (int num in arr) {
+            if (num % 3 == 0 && num % 7 != 0) {
+                count++;
+            }
+        }
+        Console.WriteLine("Количество чисел в массиве, которые делятся на 3, но не делятся на 7: " + count);
+    }
+}
