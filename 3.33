@@ -1,0 +1,27 @@
+class GuessingGame {
+    static void Main() {
+        Random random = new Random();
+        int n = 100;  // предел загадываемых чисел
+        int number = random.Next(1, n + 1);  // загаданное число
+        int k = 10;  // количество попыток
+        int attempts = 0;  
+        int guess;  // число, предположенное пользователем
+        Console.WriteLine($"Я загадал число от 1 до {n}. У вас есть {k} попыток.");
+        while (attempts < k) {
+            Console.Write("Введите ваше предположение: ");
+            guess = int.Parse(Console.ReadLine());
+            if (guess == number) {
+                Console.WriteLine("Вы угадали!");
+                return;
+            } else if (guess < number) {
+                Console.WriteLine("Загаданное число больше.");
+            } else {
+                Console.WriteLine("Загаданное число меньше.");
+            }
+
+            attempts++;
+        }
+
+        Console.WriteLine("Попытки закончились. Вы не угадали.");
+    }
+}
